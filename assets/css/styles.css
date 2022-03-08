@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #dfe6e9;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.32); 
+    box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.32);
+    transition: all 1s ease;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#34495e;
+}
+nav ul{
+    text-align: center;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+nav ul li a:hover{
+    color:#e67e22;
+    transition: all .1s ease-in;
+}
+
+.active{
+    border-bottom: 3px solid #e67e22;
+}
+/* CONTAINER */
+.container{
+    margin: 20px 100px;
+}
+
+.itemListContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.itemCard{
+    margin: 25px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 5px 10px 20px 5px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    padding: 25px 30px;
+    border-radius: 10px;
+}
+
+.itemCard img{
+    max-width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.itemCard h2{
+    margin-bottom: 15px;
+    color: #34495e;
+}
+.itemCard p{
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.itemCard p span{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.badge{
+    margin: 0;
+    font-size:12px;
+    background-color: #3498db;
+    padding: 6px;
+    border-radius: 100px;
+    display: inline;
+    color: #ecf0f1;
+}
+
+/* ABOUT */
+.about-container{
+    display: flex;
+    max-height: 70vh;
+}
+
+.imagenPerfil img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 80%;
+}
+
+.imagenPerfil,  
+.description{
+    width: 50%;
+}
+
+.description{
+    box-sizing: border-box;
+    padding: 15px 30px;
+}
+.description p{
+    margin: 10px;
+    text-align: justify;
+}
+.description ul{
+    margin-left: 25px;
+}
+
+.rrss{
+    display: flex;
+    justify-content: center;
+}
+.rrss div:first-child{
+    margin-right: 15px;
+}
+.rrss div a{
+    color: #34495e;
+    text-decoration: none;
+}
+.rrss div a i{
+    margin-right: 5px;
+}
+
+footer{
+    margin: 50px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.hamburguer-menu{
+    display: none;
+}
+
+/* BADGE BG*/
+
+.badge-bg-secondary{
+    background-color:#f1c40f;
+}
+
+.hamburger-menu{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .container{
+        margin:10px 0px;
+    }
+}
+
+@media screen and (max-width:428px) {
+    header{
+        position: relative;
+    }
+
+    .about-container{
+        max-height: unset;
+    }
+    .active {
+        border-bottom: unset;
+        color: #e67e22;
+        font-weight: bold;
+    }
+    .hamburger-menu{
+        display: inline-block;
+        padding: 15px 0;
+        z-index: 1;
+    }
+    .menu__box{
+        position: absolute;
+        width: 100%;
+        top: -500%;
+        background-color: #ffffff;
+        transition: top .1s ease-in;
+    }
+    .menu__box ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-container{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .imagenPerfil,  
+    .description{
+    width: 90%;
+    }
+    #menu__toggle {
+        opacity: 0;
+      }
+      #menu__toggle:checked + .menu__btn > span {
+        transform: rotate(45deg);
+      }
+      #menu__toggle:checked + .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+      }
+      #menu__toggle:checked + .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      .menu__btn {
+        position: fixed;
+        top: 20px;
+        left: 47%;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+      }
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -8px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 8px;
+      }
+}
