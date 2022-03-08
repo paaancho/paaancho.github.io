@@ -1,3 +1,12 @@
+let txtTitle = "Ecommerce desarrollado por Francisco Santibañez | "
+    const time = 500;
+    let refresh = null;
+function title(){
+    document.title = txtTitle
+    txtTitle = txtTitle.substring(1, txtTitle.length) + txtTitle.charAt(0);
+    refresh = setTimeout("title()", time);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelectorAll('#header');
 
@@ -20,4 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             menuBox[0].style.top = '-300%';
         }
     })
+
+    title();
+    
 })
