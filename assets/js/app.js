@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const btnMenu = document.querySelectorAll('#menu__toggle');
-    const menuBox = document.querySelectorAll('.menu__box')
+    const menuBox = document.querySelectorAll('.menu')
 
     btnMenu[0].addEventListener('click', (evt) => {
         if(evt.target.checked){
