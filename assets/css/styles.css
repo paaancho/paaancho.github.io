@@ -51,7 +51,8 @@ nav ul li a:hover{
 }
 
 .menu__link--active{
-    border-bottom: 3px solid #e67e22;
+    font-weight: bold;
+    color: #e67e22;
 }
 
 /** PIE DE PAGINA **/
@@ -260,11 +261,6 @@ nav ul li a:hover{
         max-height: unset;
         flex-direction: column;
         align-items: center;
-    }
-    .menu__link--active {
-        border-bottom: unset;
-        color: #e67e22;
-        font-weight: bold;
     }
 
     .about__image,  
